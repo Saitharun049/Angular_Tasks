@@ -1,0 +1,46 @@
+<p>data-bound works!</p>
+
+<p>Using Template Variables To Interact with Child Components Styling Components</p>
+<p [ngClass]="{'text-bold': isTextBold}" [ngStyle]="{color: 'red', 'font-size': '20px'}">{{myData}}</p>
+<p>{{parentData}}</p>
+<button (click)="onClick()">Click here to communicate with parent</button>
+
+
+<p>Repeating Data with ngFor</p>
+
+<ul>
+    <li *ngFor="let item of items">{{item}}</li>
+</ul>
+
+<p>Using the Safe-Navigation Operator</p>
+<p>{{employee?.name}}</p>
+
+<p>Hiding Elements with ngIf</p>
+<p *ngIf="isLoggedIn"> Employee is logged In.</p>
+<p *ngIf="!isLoggedIn">Employee is not logged In.</p>
+
+<p>Hiding Elements with [Hidden]</p>
+<p [hidden]="!isLoggedIn"> Employee is logged In.</p>
+<p [hidden]="isLoggedIn">Employee is not logged In.</p>
+
+<p>Hiding and Showing Elements with ngSwitch</p>
+<div [ngSwitch]="status">
+    <p *ngSwitchCase="'ACTIVE'">Employee is in Active State</p>
+    <p *ngSwitchCase="'INACTIVE'">Employee is in InActive State</p>
+    <p *ngSwitchDefault>Employee unkonwn State</p>
+</div>
+
+<p>Adding Style with ngClass</p>
+<div [ngClass]="{'c-blue' : isClassStyle}">Blue color applied</div>
+
+<p>Adding Style with ngStyle</p>
+<div [ngStyle]="{'font-size': '20px'}">This text has a 20 font size</div>
+
+<br/>
+
+<p>Linking to Routes</p>
+<a routerLink="/employee/details">Click here goto employee</a>
+
+<p>Navigating from Code</p>
+<button (click)="gotoEmployee(1)">Click here goto employee</button>
+

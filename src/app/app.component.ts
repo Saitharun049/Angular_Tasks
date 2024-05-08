@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DemoProject';
+
+  appData: string = "Testing-Data-Bound from app component";
+
+
+  handleClickFun(msg: string) {
+    alert(msg);
+  }
 }
